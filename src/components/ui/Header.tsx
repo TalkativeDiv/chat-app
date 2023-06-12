@@ -2,8 +2,8 @@ import React from 'react';
 import { Flex, Spacer, Box, Button } from '@chakra-ui/react';
 import { IconButton } from '@chakra-ui/button';
 import { useColorMode } from '@chakra-ui/color-mode';
-import { SunIcon, MoonIcon } from '@chakra-ui/icons';
-
+import { SunIcon, MoonIcon, Icon } from '@chakra-ui/icons';
+import { AiFillGithub } from 'react-icons/ai';
 interface Props {
   user: any;
   auth: any;
@@ -24,6 +24,14 @@ const Header = ({ user, auth }: Props) => {
       </Flex>
       <Spacer />
       <Flex gap={4}>
+        <IconButton
+          aria-label="Github"
+          ml={8}
+          icon={<Icon as={AiFillGithub} />}
+          onClick={() =>
+            window.open('https://github.com/TalkativeDiv/chat-app')
+          }
+        ></IconButton>
         <IconButton
           aria-label="Toggle Theme"
           ml={8}
